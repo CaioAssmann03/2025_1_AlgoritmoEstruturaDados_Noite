@@ -1,6 +1,6 @@
 import sys 
 from PyQt5.QtWidgets import *
-from Veiculos import Veiculos
+from Veiculo import Veiculos
 
 class TelaVeiculo(QMainWindow):
 
@@ -8,12 +8,12 @@ class TelaVeiculo(QMainWindow):
         super().__init__()
 
         self.setWindowTitle(titulo)
-        self.setGeometry(100, 150, 303, 300) #setGeometry(x, y, largura, altura)
+        self.setGeometry(450,150, 300, 150) #setGeometry(x, y, largura, altura)
         self.layout = QVBoxLayout()
 
         self.definirLayout()
         #botão
-        self.btnSalvar = QPushButton("salvar", self) #o botão de salvar recebrá a classe de pyqt5 QPushButton com o "salvar, que é minha função definida no código abaixo"
+        self.btnSalvar = QPushButton("Salvar", self) #o botão de salvar recebrá a classe de pyqt5 QPushButton com o "salvar, que é minha função definida no código abaixo"
         self.btnSalvar.clicked.connect(self.salvar)#programei para quando este botão for clicado ele irá conectar à função salvar dentro do próprio método construtor.
         self.layout.addWidget(self.btnSalvar)#estou afirmando que o layout receberá um widget, que é o botão que criei acima.
 
